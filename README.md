@@ -1,7 +1,3 @@
-# limitless-ink-pay
-
----
-
 # LimitlessInk | Payment Portal
 
 This is the official, static landing page for **LimitlessInk** international payment instructions. It serves as a high-performance, responsive guide for clients to facilitate transactions via international remittance services to local Philippine accounts.
