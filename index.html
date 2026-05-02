@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Guide | LimitlessInk</title>
+    <style>
+        :root {
+            --bg-color: #050505;
+            --card-bg: #0d0814;
+            --accent-gold: #fbbf24;
+            --accent-gold-hover: #f59e0b;
+            --accent-purple: #7e22ce;
+            --border-purple: #3b0764;
+            --text-main: #f3f4f6;
+            --text-muted: #a1a1aa;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 1.5rem;
+            box-sizing: border-box;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: white;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-purple);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 40px rgba(126, 34, 206, 0.1);
+        }
+
+        .section-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            color: white;
+            border-bottom: 1px solid var(--border-purple);
+            padding-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .platforms {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .platform-tag {
+            background: rgba(126, 34, 206, 0.15);
+            border: 1px solid var(--border-purple);
+            color: var(--accent-gold);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .data-bank {
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px dashed var(--border-purple);
+        }
+
+        .data-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.25rem;
+            gap: 1rem;
+        }
+
+        /* Responsive Stack for Data Rows */
+        @media (max-width: 480px) {
+            .data-row {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+            .data-row-action {
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+            }
+        }
+
+        .data-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .data-label {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        .data-value {
+            font-weight: 600;
+            font-size: 1rem;
+            color: white;
+            text-align: right;
+        }
+
+        @media (max-width: 480px) {
+            .data-value {
+                text-align: left;
+            }
+        }
+
+        .copy-btn {
+            background-color: var(--accent-gold);
+            color: #000000;
+            border: none;
+            padding: 0.6rem 0;
+            width: 75px;
+            border-radius: 8px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            flex-shrink: 0;
+        }
+
+        .copy-btn:hover {
+            background-color: var(--accent-gold-hover);
+            transform: scale(1.05);
+        }
+
+        .instructions {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+        }
+
+        .instructions ol {
+            padding-left: 1.2rem;
+        }
+
+        .instructions li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .instructions strong {
+            color: var(--accent-gold);
+            word-break: break-all;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="logo">Limitless<span>Ink</span></h1>
+            <p class="subtitle">Payment Gateway Guide</p>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">Methods</h2>
+            <div class="platforms">
+                <span class="platform-tag">Remitly</span>
+                <span class="platform-tag">WorldRemit</span>
+                <span class="platform-tag">Wise</span>
+            </div>
+
+            <h2 class="section-title">Recipient Details</h2>
+            <p class="instructions" style="margin-bottom: 1.5rem; font-size: 0.85rem;">Select <strong>Mobile Wallet</strong> as the delivery method in your preferred app.</p>
+            
+            <div class="data-bank">
+                <div class="data-row">
+                    <span class="data-label">Account Name</span>
+                    <span class="data-value">Noelsan Montenegro Bocafigura</span>
+                </div>
+                <div class="data-row">
+                    <span class="data-label">Wallet Provider</span>
+                    <span class="data-value">Maya Philippines</span>
+                </div>
+                <div class="data-row data-row-action" style="margin-top: 1.5rem; border-top: 1px solid var(--border-purple); padding-top: 1rem;">
+                    <div>
+                        <div class="data-label">Mobile Number</div>
+                        <div class="data-value" id="maya-number" style="color: var(--accent-gold);">09995608349</div>
+                    </div>
+                    <button class="copy-btn" onclick="copyNumber()">Copy</button>
+                </div>
+            </div>
+
+            <h2 class="section-title">Final Steps</h2>
+            <div class="instructions">
+                <ol>
+                    <li>Transfer the exact invoice amount.</li>
+                    <li>Ensure the mobile number is entered correctly.</li>
+                    <li>Email the confirmation screenshot to: <br><strong>limitlessink.dev@gmail.com</strong></li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 LimitlessInk &bull; Built for Performance
+        </div>
+    </div>
+
+    <script>
+        function copyNumber() {
+            // The raw number to be copied
+            const number = "09995608349"; 
+            
+            navigator.clipboard.writeText(number).then(() => {
+                // Target the button using the class selector
+                const btn = document.querySelector('.copy-btn'); 
+                
+                // Save original state
+                const originalText = btn.textContent;
+                const originalBg = btn.style.backgroundColor;
+    
+                // Feedback state
+                btn.textContent = 'COPIED!';
+                // Correct way to call CSS variables in JS:
+                btn.style.backgroundColor = "getComputedStyle(document.documentElement).getPropertyValue('--accent-purple')";
+                // Fallback purple if the line above is too complex:
+                btn.style.backgroundColor = "#7e22ce"; 
+                btn.style.color = "#ffffff";
+                
+                // Revert after 2 seconds
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.backgroundColor = originalBg;
+                    btn.style.color = "#000000";
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                alert("Manual copy required for this browser.");
+            });
+        }
+    </script>
+</body>
+</html>
